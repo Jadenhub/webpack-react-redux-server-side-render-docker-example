@@ -1,0 +1,10 @@
+/* global font family */
+body {
+  font-family: "Helvetica", Roboto, "Microsoft JhengHei Light", PingFangSC-Light;
+  background-color: #fafafa;
+}
+
+ul, li {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}

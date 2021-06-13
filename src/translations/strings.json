@@ -1,0 +1,19 @@
+{
+  "PROJECT_NAME": "webpack-react-redux-server-side-render-docker-example",
+  "META_TITLE": "Webapp",
+
+  "COMMENTS": "Comments",
+  "COMMENT": "Comment",
+  "TITLE": "Title",
+  "CONTENT": "Content",
+  "AUTHOR": "Author",
+  "REPLY": "Reply",
+  "SEND": "Send",
+  /** User*/
+  "NAME": "Name",
+  "PHONE": "Phone",
+  "WEBSITE": "Website",
+  "ADDRESS": "Address",
+  "COMPANY": "Company",
+  "EMAIL": "Email"
+}
