@@ -9,7 +9,7 @@ Example of an React/Redux application with webpack including server-side renderi
 * Server-Side Rendering 
 * styled-component
 * Webpack 5
-* Docker
+* Docker
 
 ## Overview
 Webpack compile javascript for usage in server and client via two separate configurations. 
