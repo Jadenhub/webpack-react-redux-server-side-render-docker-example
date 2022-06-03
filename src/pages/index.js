@@ -7,6 +7,7 @@ import PostList from '../components/post/PostList';
 import { SIDE_WIDTH } from '../constants/style';
 import { fetchPosts } from '../state/post/post';
 import { fetchUsers } from '../state/user/user';
+import svgA from '../../public/group.svg'
 
 const HomeWrapper = styled.div`
   margin: 0 ${SIDE_WIDTH} 0 ${SIDE_WIDTH};
@@ -15,6 +16,7 @@ const PostListWrapper = styled.section`
   /* margin: 10px 24px 0 24px; */
 `
 
+console.log('svgA', svgA);
 function Home(){
   const dispatch = useDispatch();
   useEffect(()=>{
@@ -23,6 +25,7 @@ function Home(){
   }, [])
   return (
     <HomeWrapper>
+      <img src={svgA} />
       <PostListWrapper>
         <PostList />
       </PostListWrapper>
