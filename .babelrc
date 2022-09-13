@@ -4,10 +4,7 @@
         "@babel/preset-react"
     ],
     "plugins": [
-        ["@babel/plugin-transform-runtime",
-          {
-            "regenerator": true
-          }
+        ["@babel/plugin-transform-react-jsx"
         ],
        [
         "babel-plugin-styled-components",

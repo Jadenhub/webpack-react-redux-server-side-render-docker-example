@@ -8,7 +8,7 @@
     "dev:build:client": "webpack --mode development --config webpack.client.dev.js --watch",
     "build": "npm run build:client && npm run build:server",
     "build:server": "webpack --mode development --config webpack.server.js",
-    "build:client": "webpack --mode development --config webpack.client.prod.js",
+    "build:client": "webpack --config webpack.client.prod.js",
     "lint": "eslint src/*.js --quiet",
     "start": "node ./build/bundle.js",
     "docker:refresh": "docker-compose down -v && docker-compose build --no-cache",
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-react-jsx": "^7.18.6",
     "@babel/plugin-transform-runtime": "^7.14.3",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.14.4",

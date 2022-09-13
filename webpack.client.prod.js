@@ -1,41 +1,40 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-
 module.exports = {
-  entry: './src/client/client.js',
+  entry: "./src/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, "public"),
   },
-  mode: 'production',
+  devtool: "hidden-source-map",
+  mode: "production",
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/,
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin()],
   optimization: {
     minimize: true,
     minimizer: [
       new TerserPlugin({
         terserOptions: {
           format: {
-              comments: false,
+            comments: false,
           },
         },
         extractComments: false,
       }),
-      new OptimizeCSSAssetsPlugin()
+      new OptimizeCSSAssetsPlugin(),
     ],
   },
 };
